@@ -1,0 +1,220 @@
+:root {
+  --primary-100: hsl(259, 100%, 65%);
+  --primary-200: hsl(0, 100%, 67%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(0, 0%, 94%);
+  --neutral-300: hsl(0, 0%, 86%);
+  --neutral-400: hsl(0, 1%, 44%);
+  --neutral-500: hsl(0, 0%, 8%);
+  --poppins: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--neutral-200);
+  font-size: 16px !important;
+  height: 100vh;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.date-card {
+  width: 50rem;
+  height: 35rem;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0.5rem 0.5rem 10rem 0.5rem;
+  text-align: center;
+}
+
+.date-input-container {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.date-input-container span {
+  display: block;
+  margin-top: 10px;
+}
+
+.dateInput {
+  width: 7.3rem;
+  height: 2.5rem;
+  padding: 0.4rem 0.6rem;
+  margin-right: 25px;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--neutral-500);
+  font-family: var(--poppins);
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--primary-100);
+  outline-offset: 0px !important;
+  outline: none !important;
+}
+
+input[type="datetime"]:active {
+  border-color: var(--primary-100) !important;
+}
+
+input::placeholder {
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: var(--poppins);
+}
+
+.error {
+  color: var(--primary-200);
+  font-family: var(--poppins);
+  font-weight: light;
+  margin-right: 12px;
+  font-size: 1rem;
+}
+
+.error-input {
+  border-color: var(--primary-200);
+}
+
+.red {
+  color: red;
+}
+
+.dateLabel {
+  font-family: var(--poppins);
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--neutral-400);
+  text-align: left;
+}
+
+.side-by-side-container-lg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-by-side-container-sm {
+  display: none;
+}
+
+.hr-divider {
+  border: none;
+  border-top: 1px solid var(--neutral-300);
+  width: 650px;
+  margin: 0;
+}
+
+.action-button {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: var(--primary-100);
+  border: none;
+  cursor: pointer;
+}
+
+.action-button:active {
+  background-color: var(--neutral-500) !important;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-right: 20px;
+}
+
+.card-body div {
+  font-size: 6rem;
+  font-family: var(--poppins);
+  margin-left: 2rem;
+  font-style: italic;
+  font-weight: 800;
+  text-align: left;
+  padding: 15px;
+}
+
+.card-body div span {
+  color: var(--primary-100);
+}
+
+svg {
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .date-card {
+    width: 21.5rem;
+    height: 28rem;
+  }
+
+  .dateInput {
+    width: 4.5rem;
+    padding: 0.3rem 0.6rem;
+    text-align: left;
+    font-size: 01.5rem;
+  }
+
+  .date-input-container {
+    margin-left: 0;
+  }
+
+  input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .side-by-side-container-lg {
+    display: none;
+  }
+
+  .side-by-side-container-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hr-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ced4da;
+    position: relative;
+    margin: 50px;
+  }
+
+  .action-button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    height: 75px;
+    width: 75px;
+  }
+
+  .card-body div {
+    font-size: 3.7rem;
+    white-space: nowrap;
+    margin-left: 0;
+    padding: 5px;
+  }
+
+  .error {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  svg {
+    height: 32px;
+  }
+}

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="date-card">
+        <div class="date-input-container">
+          <div>
+            <label id=" js-label1" for="day" class="dateLabel" >DAY</label>
+            <input class="dateInput js-day" type="text" placeholder="DD" name="day" />
+            <span class="error js-error-message"></span>
+          </div>
+
+          <div>
+            <label for="month" class="dateLabel ">MONTH</label>
+            <input
+              class="dateInput js-month "
+              type="text"
+              placeholder="MM"
+              name="month"
+            />
+            <span class="error js-error-message2"></span>
+          </div>
+
+          <div>
+            <label for="year" class="dateLabel">YEAR</label>
+            <input
+              class="dateInput js-year "
+              type="text"
+              placeholder="YYYY"
+              name="year"
+            />
+            <span class="error js-error-message3"></span>
+          </div>
+
+        </div>
+        <div class="side-by-side-container-sm">
+          <hr class="hr-divider middle" >
+          <button onclick="
+          calculateAge();
+          " class="action-button"> <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="38"
+            viewBox="0 0 46 44"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </button>
+        </div>
+
+        <div class="side-by-side-container-lg">
+          <hr class="hr-divider" />
+          <button onclick="
+          calculateAge();
+          " class="action-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="46"
+              height="38"
+              viewBox="0 0 46 44"
+            >
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div class="card-body">
+          <div class="years">
+            <p><span class="year-result">- -</span> years</p>
+          </div>
+          <div class="months">
+            <p><span class="month-result">- -</span> months</p>
+          </div>
+          <div class="days">
+            <p><span class="days-result">- -</span> days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
